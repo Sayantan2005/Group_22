@@ -4,59 +4,192 @@
 \geometry{a4paper, margin=1in}
 \usepackage{tikz}
 \usetikzlibrary{calc}
+\usepackage{hyperref} 
+\usepackage{color}
+\usepackage{array} % For centering content in table cells
+\usepackage{lipsum} % For placeholder text
 
 % Title, author, and date
-\title{\Huge \textbf{Software Tools And Technology}} 
-\author{Group 29}
-\date{}
+\title{
+    \vspace{-2cm}
+    \Huge \textbf{\color{blue!60} Software Tools And Technology}\\[0.5cm]
+    \includegraphics[width=0.3\linewidth]{Makaut.png}\\[0.5cm]
+    \LARGE \textbf{\color{black} Lab Notebook}
+}
+\author{
+    \vspace{1cm}
+    \Large Group 29
+}
+\date{} % Leave empty to manually specify the date
+
 \begin{document}
-
-\begin{figure}
-    \centering
-    \includegraphics[width=0.3\linewidth]{Makaut.png}
-\end{figure}
-
 \maketitle
 \pagenumbering{gobble}
 
+% Border
 \begin{tikzpicture}
-[remember picture, overlay] \draw[line width = 2pt] ($(current page.north west) + (0.5in, -0.5in)$) rectangle ($(current page.south east) + (-0.5in, 0.5in)$);
+    [remember picture, overlay]
+    \draw[line width = 2pt, blue] 
+        ($(current page.north west) + (1cm,-1cm)$) 
+        rectangle 
+        ($(current page.south east) + (-1cm,1cm)$);
 \end{tikzpicture}
 
+\vspace{-1cm}
 \begin{center}
-    \vspace{-1.2cm}
-    \LARGE\textbf{Lab Notebook}
+    \textbf{Repository Link:} \href{https://github.com/Sayantan2005/Group\_22}{\textcolor{blue!60}{https://github.com/Sayantan2005/Group\_22}}
 \end{center}
 
-\vspace{0.5cm}
+\vspace{1cm}
 
 \centering
-\bfseries{\underline{Group Members:}}
-\vspace{0.2cm}
+\bfseries{\underline{\Large \textcolor{blue!60}{Group Members:}}}
+\vspace{0.5cm}
 
+\begin{flushleft}
 \begin{enumerate}
-    \item \textbf{Sayantan Sarkar} \\
-    Roll No: 30085323013 \\
+    \item \textbf{Leader Name: Sayantan Sarkar}\\
+    \textit{Roll No: 30085323013} \\
     Department: BSc in IT (Cyber Security)
     
-    \item \textbf{Diya Sarkar} \\
-    Roll No: 30059223032 \\
+    \item \textbf{Collaborator 1: Diya Sarkar} \\
+    \textit{Roll No: 30059223032} \\
     Department: BSc in Forensic Science
     
-    \item \textbf{Shinjinee Biswas} \\
-    Roll No: 3001223029 \\
+    \item \textbf{Collaborator 2: Shinjinee Biswas} \\
+    \textit{Roll No: 30001223029} \\
     Department: BCA
     
-    \item \textbf{Sampurna Das} \\
-    Roll No: 30059223038 \\
+    \item \textbf{Collaborator 3: Sampurna Das} \\
+    \textit{Roll No: 30059223038} \\
     Department: BSc in Forensic Science
     
-    \item \textbf{Sidhita Dey} \\
-    Roll No: 30059223020 \\
+    \item \textbf{Collaborator 4: Sidhita Dey} \\
+    \textit{Roll No: 30059223020} \\
     Department: BSc in Forensic Science
 \end{enumerate}
+\end{flushleft}
 
-\vspace{0.8cm}
-\textbf{Instructor:} Ayan Ghosh \\
-\date{\today}
+\vspace{1cm}
+\begin{center}
+\textbf{Instructor:} \textcolor{blue!60}{Ayan Ghosh} \\
+\vspace{0.3cm}
+\textit{Date: \today}
+\end{center}
+
+\newpage
+\begin{tikzpicture}
+    [remember picture, overlay]
+    \draw[line width = 2pt, blue] 
+        ($(current page.north west) + (1cm,-1cm)$) 
+        rectangle 
+        ($(current page.south east) + (-1cm,1cm)$);
+\end{tikzpicture}
+
+% Index Table
+\section*{\underline{\Huge\textbf{\textcolor{blue!60}{Index Table}}}}
+\vspace{0.5cm}
+
+\renewcommand{\arraystretch}{3} % Adjusts row height
+\setlength{\tabcolsep}{20pt} % Adjusts column padding
+
+\begin{tabular}{|>{\centering\arraybackslash}p{80pt}|>{\centering\arraybackslash}p{250pt}|}
+\hline
+\textbf{Serial No.} & \textbf{Questions} \\
+\hline
+1 & Introduction to Github and Github desktop version installation \\\hline
+2 & Building a C programme of calculator in the local repository, committing and publishing it as a public repository \\\hline
+3 & Converting submit button to Chin tapak dum dum \\\hline
+% 4 & How do you analyze the results? \\\hline
+% 5 & What conclusions can be drawn from the results? \\\hline
+% 6 & What references were used for this lab? \\
+% \hline
+\end{tabular}
+
+
+
+\newpage
+\begin{tikzpicture}
+    [remember picture, overlay]
+    \draw[line width = 2pt, blue] 
+        ($(current page.north west) + (1cm,-1cm)$) 
+        rectangle 
+        ($(current page.south east) + (-1cm,1cm)$);
+\end{tikzpicture}
+\vspace{-2cm}
+% Lab notebook entries
+\section*{\Huge{\textcolor{blue!60}{Lab Notebook Entries}}}
+
+% Each member writes their entry below
+\subsection*{Entry by Sayantan Sarkar}
+\textit{Date: [\today]}\\
+
+% Insert the image below the date and above the GitHub section
+\begin{figure}[h!]
+   \centering
+    \includegraphics[width=0.5\linewidth]{Github.png}
+\end{figure}
+
+\vspace{-1cm} % Adjust this value if you want more space between the image and the text below
+
+\section*{\Huge{GitHub}}
+\paragraph{GitHub is a web-based platform that allows developers to host, share, and collaborate on software projects. It provides a version control system powered by Git, enabling teams to track changes, manage code repositories, and work together seamlessly, even across different locations. GitHub supports collaborative development through features like pull requests, issues, and project boards, making it an essential tool for open-source projects and professional software development alike. Additionally, it offers integration with various development tools, enhancing productivity and streamlining the software development lifecycle.}
+
+\subsection*{Installation}
+\paragraph{Installing GitHub Desktop is a straightforward process that enhances your workflow by providing a user-friendly interface for managing repositories. To begin, download the installer from the [official GitHub Desktop website](https://desktop.github.com/) for your operating system—Windows or macOS. After downloading, simply run the installer and follow the on-screen instructions to complete the setup. Once installed, you can launch the application and sign in with your GitHub credentials, or create a new account if needed. GitHub Desktop streamlines the process of cloning repositories, making commits, and managing branches, making it an invaluable tool for developers of all skill levels. For Linux users, alternative methods like using Wine or other Git clients are available.}
+
+
+\newpage
+\begin{tikzpicture}
+    [remember picture, overlay]
+    \draw[line width = 2pt, blue] 
+        ($(current page.north west) + (1cm,-1cm)$) 
+        rectangle 
+        ($(current page.south east) + (-1cm,1cm)$);
+\end{tikzpicture}
+\vspace{-2cm}
+\subsection*{Entry by Diya Sarkar}
+\textit{Date: [\today]}\\
+% Write your lab notebook entry here.
+
+\newpage
+\begin{tikzpicture}
+    [remember picture, overlay]
+    \draw[line width = 2pt, blue] 
+        ($(current page.north west) + (1cm,-1cm)$) 
+        rectangle 
+        ($(current page.south east) + (-1cm,1cm)$);
+\end{tikzpicture}
+
+\subsection*{Entry by Shinjinee Biswas}
+\textit{Date: [\today]}\\
+% Write your lab notebook entry here.
+
+\newpage
+\begin{tikzpicture}
+    [remember picture, overlay]
+    \draw[line width = 2pt, blue] 
+        ($(current page.north west) + (1cm,-1cm)$) 
+        rectangle 
+        ($(current page.south east) + (-1cm,1cm)$);
+\end{tikzpicture}
+\vspace{-2cm}
+\subsection*{Entry by Sampurna Das}
+\textit{Date: [\today]}\\
+% Write your lab notebook entry here.
+
+\newpage
+\begin{tikzpicture}
+    [remember picture, overlay]
+    \draw[line width = 2pt, blue] 
+        ($(current page.north west) + (1cm,-1cm)$) 
+        rectangle 
+        ($(current page.south east) + (-1cm,1cm)$);
+\end{tikzpicture}
+\vspace{-2cm}
+\subsection*{Entry by Sidhita Dey}
+\textit{Date: [\today]}\\
+% Write your lab notebook entry here.
+
+
 \end{document}
