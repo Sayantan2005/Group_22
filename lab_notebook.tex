@@ -172,7 +172,105 @@
 \vspace{-2cm}
 \subsection*{Entry by Diya Sarkar}
 \textit{Date: [\today]}\\
-% Write your lab notebook entry here.
+\section*{\LARGE{Build a c program of calculator in the local repository, commit and publish it as a {\underline{-:public repository:-}}}}
+
+
+\vspace{2 cm}
+\Large{Below is a basic C program for a calculator that can perform addition, subtraction, multiplication, and division:}
+\vspace{0.5 cm}
+
+
+\begin{lstlisting}[language=C, basicstyle=\ttfamily\footnotesize, keywordstyle=\color{blue}]
+#include <stdio.h>
+
+int main() {
+    char operator;
+    double num1, num2;
+    printf("Enter an operator (+, -, *, /): ");
+    scanf("%c", &operator);
+    printf("Enter two operands: ");
+    scanf("%lf %lf", &num1, &num2);
+
+    switch (operator) {
+        case '+':
+            printf("%.2lf + %.2lf = %.2lf\n", num1, num2, num1 + num2);
+            break;
+        case '-':
+            printf("%.2lf - %.2lf = %.2lf\n", num1, num2, num1 - num2);
+            break;
+        case '*':
+            printf("%.2lf * %.2lf = %.2lf\n", num1, num2, num1 * num2);
+            break;
+        case '/':
+            if (num2 != 0.0)
+                printf("%.2lf / %.2lf = %.2lf\n", num1, num2, num1 / num2);
+            else
+                printf("Error! Division by zero.\n");
+            break;
+        default:
+            printf("Invalid operator!\n");
+            break;
+    }
+    return 0;
+}
+\end{lstlisting}
+\newpage
+\begin{tikzpicture}
+    [remember picture, overlay]
+    \draw[line width = 2pt, blue] 
+        ($(current page.north west) + (1cm,-1cm)$) 
+        rectangle 
+        ($(current page.south east) + (-1cm,1cm)$);
+\end{tikzpicture}
+\vspace{-2 cm}
+\section*{Step 2: Create a Local Git Repository and Commit the Program}
+
+\begin{enumerate}
+    \item Open your terminal or command prompt.
+    \item Navigate to the directory where your \texttt{calculator.c} file is located:
+    
+    \begin{lstlisting}[language=bash, basicstyle=\ttfamily\footnotesize]
+cd /path/to/your/directory
+    \end{lstlisting}
+    
+    \item Initialize a Git repository in the directory:
+    
+    \begin{lstlisting}[language=bash, basicstyle=\ttfamily\footnotesize]
+git init
+    \end{lstlisting}
+    
+    \item Add the \texttt{calculator.c} file to the staging area:
+    
+    \begin{lstlisting}[language=bash, basicstyle=\ttfamily\footnotesize]
+git add calculator.c
+    \end{lstlisting}
+    
+    \item Commit the changes:
+    
+    \begin{lstlisting}[language=bash, basicstyle=\ttfamily\footnotesize]
+git commit -m "Initial commit: Added calculator program"
+    \end{lstlisting}
+\end{enumerate}
+
+\section*{Step 3: Publish the Repository to GitHub}
+
+\begin{small}
+\begin{enumerate}
+    \item Create a new repository on \href{https://github.com}{GitHub}. Make it public, and don't initialize it with any files.
+    \item Copy the repository URL (e.g., \texttt{https://github.com/yourusername/repositoryname.git})
+    \item In your terminal, add the GitHub repository as a remote:
+    
+    \begin{lstlisting}[language=bash, basicstyle=\ttfamily\footnotesize]
+git remote add origin https://github.com/diya-20/Diya_Cal.git
+    \end{lstlisting}
+    
+    \item Push your local repository to GitHub:
+    
+    \begin{lstlisting}[language=bash, basicstyle=\ttfamily\footnotesize]
+git push -u origin master
+    \end{lstlisting}
+\end{enumerate}
+\end{small}
 
 \newpage
 \begin{tikzpicture}
