@@ -123,7 +123,7 @@
 2 & Building a C programme of calculator in the local repository, committing and publishing it as a public repository \\\hline
 3 & Converting submit button to Chin tapak dum dum \\\hline
 % 4 & How do you analyze the results? \\\hline
-% 5 & What conclusions can be drawn from the results? \\\hline
+5 & Creating a Latex repository in Github \\\hline
 % 6 & What references were used for this lab? \\
 % \hline
 \end{tabular}
@@ -435,7 +435,110 @@ public class SymbolApp extends Frame implements ActionListener {
 \vspace{-2cm}
 \subsection*{Entry by Sidhita Dey}
 \textit{Date: [\today]}\\
-% Write your lab notebook entry here.
+\centering
+\section*{\textcolor{blue!60}{\Huge Creating a LaTeX Repository on GitHub Using GitHub Desktop}}
+
+\vspace{0.8cm}
+
+\textmd{Creating a LaTeX repository on GitHub using GitHub Desktop is a convenient way to manage and collaborate on your LaTeX projects. This guide provides a step-by-step approach to setting up your repository.}
+
+\vspace{1.3cm}
+
+\section*{\textcolor{blue!60}{1. Set Up a GitHub Account}}
+
+\textmd{If you don’t already have a GitHub account, you need to create one:}
+\begin{itemize}
+    \item Go to \texttt{https://github.com/join}.
+    \item Fill out the registration form and follow the instructions to create your account.
+\end{itemize}
+
+\vspace{1cm}
+
+\section*{\textcolor{blue!60}{2. Create a New Repository Using GitHub Desktop}}
+\vspace{0.6cm}
+\begin{enumerate}
+    \item \textbf{Open GitHub Desktop}:
+    \begin{itemize}
+        \item \textmd{Launch the GitHub Desktop application on your computer}.
+    \end{itemize}
+\vspace{2cm}
+\begin{tikzpicture}
+    [remember picture, overlay]
+    \draw[line width = 2pt, blue] 
+        ($(current page.north west) + (1cm,-1cm)$) 
+        rectangle 
+        ($(current page.south east) + (-1cm,1cm)$);
+\end{tikzpicture}
+\vspace{-1cm}
+    \item \textbf{Sign In}:
+    \begin{itemize}
+        \item \textmd{If you’re not already signed in, go to \texttt{File > Options} (or \texttt{GitHub Desktop > Preferences} on macOS) and sign in with your GitHub credentials.}
+    \end{itemize}
+\vspace{0.3cm}
+    \item \textbf{Create a New Repository}:
+    \begin{itemize}
+        \item \textmd{Click on \texttt{File > New Repository} (or use the \texttt{+} button in the top-left corner and select \texttt{Create New Repository}).}
+    \end{itemize}
+\vspace{0.3cm}  
+    \item \textbf{Fill in Repository Details}:
+    \begin{itemize}
+        \item \textbf{Name}: \textmd{Enter a name for your repository.\texttt{(e.g: latex)}}
+        
+        \item \textbf{Description} (optional): \textmd{Add a brief description if you’d like.}
+        
+        \item \textbf{Local Path}: \textmd{Choose a location on your computer where the repository will be created.}
+        
+        \item \textbf{Initialize this repository with a README}: \textmd{Check this box if you want a README file.}
+        
+        \item \textbf{Add .gitignore}: \textmd{Select \texttt{LaTeX} from the template options to avoid tracking unnecessary files. If not available, you can manually add a \texttt{.gitignore} file later.}
+        
+        \item \textbf{License}: \textmd{Optionally, you can choose a license for your project.}
+    \end{itemize}
+\vspace{0.3cm}
+    \item \textbf{Create Repository}:
+    \begin{itemize}
+        \item \textmd{Click the \texttt{Create Repository} button to finalize.}
+    \end{itemize}
+\end{enumerate}
+\newpage
+\begin{tikzpicture}
+    [remember picture, overlay]
+    \draw[line width = 2pt, blue] 
+        ($(current page.north west) + (1cm,-1cm)$) 
+        rectangle 
+        ($(current page.south east) + (-1cm,1cm)$);
+\end{tikzpicture}
+\vspace{-2cm}
+\section*{\textcolor{blue!60}{3. Add LaTeX Files to Your Repository}}
+
+\begin{enumerate}
+    \item \textbf{Open the Repository}:
+    \begin{itemize}
+        \item \textmd{Your new repository should now be visible in GitHub Desktop. If not, you can add it by going to \texttt{File > Add Local Repository}, then selecting the repository folder.}
+    \end{itemize}
+\vspace{0.3cm}
+    \item \textbf{Add Files}:
+    \begin{itemize}
+        \item \textmd{Navigate to the repository folder on your computer.}
+        \item \textmd{Add your LaTeX files (e.g., \texttt{.tex}, \texttt{.bib}, \texttt{.cls} files) into this folder.}
+    \end{itemize}
+\vspace{0.3cm}  
+    \item \textbf{Commit Your Changes}:
+    \begin{itemize}
+        \item \textmd{Go back to GitHub Desktop.}
+        \item \textmd{You should see the new files listed under the \texttt{Changes} tab.}
+        \item \textmd{Enter a commit message (e.g., \texttt{Initial commit with LaTeX files}).}
+        \item \textmd{Click the \texttt{Commit to main} button.}
+    \end{itemize}
+\vspace{0.3cm}
+    \item \textbf{Push to GitHub}:
+    \begin{itemize}
+        \item \textmd{Click the \texttt{Push origin} button at the top to upload your local commits to GitHub.}
+    \end{itemize}
+\end{enumerate}
+\vspace{0.6cm}
+\section*{\textcolor{blue!60}{4. Conclusion}}
+By following the above steps, you will have successfully created and published a LaTeX project repository named \texttt{latex} on GitHub using GitHub Desktop.
 
 
 \end{document}
